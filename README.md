@@ -1,8 +1,6 @@
 # Employee-Lifecycle-Management-System
 Web-based Employee Lifecycle Management System developed using the MERN Stack.
 
-# Employee Lifecycle Management System
-
 ## Team Development Guidelines
 
 ### Project Database
