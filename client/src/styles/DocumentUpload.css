@@ -1,0 +1,1284 @@
+/* ==========================================================
+   EMPLOYEE LIFECYCLE MANAGEMENT SYSTEM
+   Professional Dashboard UI
+==========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef3fb;
+    color: #1f2937;
+
+
+}
+
+
+.upload-container{
+
+    width:92%;
+    max-width:950px;
+
+    margin:30px auto;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:
+            0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+/* ===========================
+            TITLE
+=========================== */
+
+.main-title{
+
+    font-size:2.5rem;
+
+    line-height:1.15;
+
+    text-align:center;
+
+    color:#1e3a8a;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#6b7280;
+
+    font-size:.95rem;
+
+    margin-bottom:28px;
+
+}
+
+/* ===========================
+          FILE SECTION
+=========================== */
+
+input[type=file]{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    background:white;
+
+    cursor:pointer;
+
+    margin-bottom:18px;
+
+}
+
+.document-row{
+
+    margin-bottom:20px;
+
+}
+
+.document-row span{
+
+    display:block;
+
+    text-align:center;
+
+    font-weight:600;
+
+    color:#374151;
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================
+         SELECT BOX
+=========================== */
+
+select{
+
+    width:100%;
+
+    height:48px;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:10px;
+
+    background:white;
+
+    padding:0 15px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+/* ===========================
+         BUTTON
+=========================== */
+
+button{
+
+    width:100%;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+button:disabled{
+
+    background:#94a3b8;
+
+    cursor:not-allowed;
+
+}
+
+/* ===========================
+        ERROR
+=========================== */
+
+.error-box{
+
+    margin-top:18px;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    background:#fee2e2;
+
+    color:#991b1b;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+       RESULT CARD
+=========================== */
+
+.result-card{
+
+    margin-top:28px;
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:22px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:
+
+            0 5px 18px rgba(0,0,0,.06);
+
+}
+
+.result-card h2{
+
+    text-align:center;
+
+    color:#1e3a8a;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+      SUMMARY GRID
+=========================== */
+
+.summary-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:14px;
+
+    margin-bottom:24px;
+
+}
+
+.summary-grid div{
+
+    background:#f8fbff;
+
+    border-radius:12px;
+
+    padding:16px;
+
+    text-align:center;
+
+    border:1px solid #e5edf8;
+
+    transition:.25s;
+
+}
+
+.summary-grid div:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.summary-grid strong{
+
+    display:block;
+
+    font-size:13px;
+
+    color:#1e40af;
+
+    margin-bottom:8px;
+
+}
+
+.summary-grid p{
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.valid{
+
+    color:#16a34a;
+
+    font-weight:700;
+
+}
+
+.invalid{
+
+    color:#dc2626;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+                DETAIL SECTIONS
+========================================================== */
+
+.detail-section{
+
+    margin-top:22px;
+
+}
+
+.detail-section h3{
+
+    color:#1e40af;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    margin-bottom:12px;
+
+}
+
+/* ==========================================================
+                    JSON BOX
+========================================================== */
+
+pre{
+
+    background:#eef4ff;
+
+    border:1px solid #dbeafe;
+
+    border-radius:12px;
+
+    padding:16px;
+
+    color:#374151;
+
+    font-size:13px;
+
+    line-height:1.55;
+
+    overflow-x:auto;
+
+    overflow-y:auto;
+
+    max-height:220px;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+}
+
+/* ==========================================================
+                XAI PANEL
+========================================================== */
+
+.xai-box{
+
+    background:linear-gradient(135deg,#f8fbff,#eef6ff);
+
+    border-left:6px solid #2563eb;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    margin-top:10px;
+
+    box-shadow:0 4px 12px rgba(37,99,235,.08);
+
+}
+
+.xai-box p{
+
+    margin:8px 0;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:#374151;
+
+}
+
+.xai-box p::before{
+
+    content:"✔ ";
+
+    color:#16a34a;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================================
+            CUSTOM SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+    height:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf2f7;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#94a3b8;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#64748b;
+
+}
+
+/* ==========================================================
+            ANIMATION
+========================================================== */
+
+.result-card{
+
+    animation:fadeUp .5s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+            HOVER EFFECTS
+========================================================== */
+
+.result-card:hover{
+
+    box-shadow:0 12px 30px rgba(0,0,0,.10);
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+select:hover{
+
+    border-color:#3b82f6;
+
+}
+
+input[type=file]:hover{
+
+    border-color:#3b82f6;
+
+}
+
+/* ==========================================================
+            STATUS BADGES
+========================================================== */
+
+.valid{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    font-weight:700;
+
+}
+
+.invalid{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    background:#fee2e2;
+
+    color:#b91c1c;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+            RESPONSIVE
+========================================================== */
+
+@media(max-width:900px){
+
+    .summary-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    .upload-container{
+
+        width:95%;
+
+        padding:20px;
+
+    }
+
+    .main-title{
+
+        font-size:1.8rem;
+
+    }
+
+    .summary-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    pre{
+
+        font-size:12px;
+
+    }
+
+    button{
+
+        font-size:15px;
+
+    }
+
+}
+
+/* ==========================================================
+            NICE TRANSITIONS
+========================================================== */
+
+button,
+select,
+input,
+.result-card,
+.summary-grid div{
+
+    transition:.25s ease;
+
+}
+
+/* ==========================================================
+            FOOTER SPACE
+========================================================== */
+
+.result-card:last-child{
+
+    margin-bottom:15px;
+
+}
+
+/* If Decision is the 4th card */
+.summary-grid div:nth-child(4){
+    display: none;
+}
+
+/* ==========================================================
+                DASHBOARD SECTIONS
+==========================================================*/
+
+.section-title{
+
+    margin-top:30px;
+    margin-bottom:20px;
+
+    font-size:1.45rem;
+
+    color:#1e3a8a;
+
+    text-align:center;
+
+    font-weight:700;
+
+    position:relative;
+
+}
+
+.section-title::after{
+
+    content:"";
+
+    width:70px;
+
+    height:4px;
+
+    border-radius:20px;
+
+    background:#2563eb;
+
+    display:block;
+
+    margin:10px auto 0;
+
+}
+
+/* ==========================================================
+                VERIFICATION SUMMARY
+==========================================================*/
+
+.verification-summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:18px;
+
+    margin:25px 0;
+
+}
+
+.verify-card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    text-align:center;
+
+    border:1px solid #dbeafe;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.verify-card h4{
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+
+}
+
+.verify-value{
+
+    font-size:1.3rem;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================================
+                AUTOMATION CENTER
+==========================================================*/
+
+.automation-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:22px;
+
+    margin-top:25px;
+
+}
+
+.automation-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    border:1px solid #dbeafe;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.automation-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.15);
+
+}
+
+.automation-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:#2563eb;
+
+}
+
+.automation-icon{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+.automation-card h3{
+
+    color:#1e3a8a;
+
+    margin-bottom:10px;
+
+}
+
+.automation-card p{
+
+    color:#6b7280;
+
+    line-height:1.6;
+
+    font-size:14px;
+
+}
+
+.automation-status{
+
+    margin-top:18px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+                PROGRESS BAR
+==========================================================*/
+
+.progress-bar{
+
+    width:100%;
+
+    height:10px;
+
+    background:#e5e7eb;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-top:15px;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    background:linear-gradient(90deg,#2563eb,#22c55e);
+
+    border-radius:30px;
+
+}
+
+/* ==========================================================
+                HR DECISION PANEL
+==========================================================*/
+
+.hr-panel{
+
+    margin-top:35px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    border:1px solid #dbeafe;
+
+    box-shadow:0 10px 28px rgba(0,0,0,.08);
+
+}
+
+.hr-panel h2{
+
+    text-align:center;
+
+    color:#1e3a8a;
+
+    margin-bottom:25px;
+
+}
+
+.ai-recommendation{
+
+    background:#eff6ff;
+
+    border-left:6px solid #2563eb;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    margin-bottom:22px;
+
+}
+
+.ai-recommendation p{
+
+    margin:8px 0;
+
+}
+
+.hr-actions{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.hr-actions button{
+
+    flex:1;
+
+}
+
+.approve-btn{
+
+    background:#16a34a;
+
+}
+
+.approve-btn:hover{
+
+    background:#15803d;
+
+}
+
+.reject-btn{
+
+    background:#dc2626;
+
+}
+
+.reject-btn:hover{
+
+    background:#b91c1c;
+
+}
+
+.reupload-btn{
+
+    background:#f59e0b;
+
+}
+
+.reupload-btn:hover{
+
+    background:#d97706;
+
+}
+
+.hr-comment{
+
+    width:100%;
+
+    margin-top:20px;
+
+    border-radius:12px;
+
+    border:1px solid #d1d5db;
+
+    padding:15px;
+
+    resize:vertical;
+
+    min-height:120px;
+
+    outline:none;
+
+    font-family:inherit;
+
+}
+
+.hr-comment:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+/* ==========================================================
+                WORKFLOW TIMELINE
+==========================================================*/
+
+.workflow{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:35px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.workflow-step{
+
+    flex:1;
+
+    text-align:center;
+
+    position:relative;
+
+    min-width:120px;
+
+}
+
+.workflow-step:not(:last-child)::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:18px;
+
+    left:60%;
+
+    width:80%;
+
+    height:4px;
+
+    background:#d1d5db;
+
+    z-index:0;
+
+}
+
+.workflow-circle{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    background:#d1d5db;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:1;
+
+    font-weight:bold;
+
+}
+
+.workflow-step.active .workflow-circle{
+
+    background:#2563eb;
+
+}
+
+.workflow-step.completed .workflow-circle{
+
+    background:#22c55e;
+
+}
+
+.dashboard-fade{
+
+    animation:fadeDashboard .7s ease;
+
+}
+
+@keyframes fadeDashboard{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hr-actions{
+
+        flex-direction:column;
+
+    }
+
+    .workflow{
+
+        flex-direction:column;
+
+        gap:25px;
+
+    }
+
+    .workflow-step::after{
+
+        display:none;
+
+    }
+
+}
+
+/* ==========================================================
+                AI DASHBOARD HERO
+==========================================================*/
+
+.dashboard-hero{
+
+    margin:30px 0;
+
+    padding:28px;
+
+    border-radius:22px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(37,99,235,.12),
+                    rgba(255,255,255,.95)
+            );
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:25px;
+
+    box-shadow:
+
+            0 15px 35px rgba(37,99,235,.12);
+
+}
+
+.hero-left{
+
+    flex:2;
+
+}
+
+.hero-left h2{
+
+    color:#1e3a8a;
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+}
+
+.hero-left p{
+
+    color:#64748b;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+.hero-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+}
+
+.hero-stat{
+
+    flex:1;
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    text-align:center;
+
+    border:1px solid #dbeafe;
+
+    box-shadow:
+
+            0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.hero-stat span{
+
+    display:block;
+
+    color:#64748b;
+
+    font-size:13px;
+
+    margin-bottom:10px;
+
+}
+
+.hero-stat strong{
+
+    font-size:1.3rem;
+
+    color:#1e3a8a;
+
+}
+
+.dashboard-hero:hover{
+
+    transform:translateY(-3px);
+
+    transition:.3s;
+
+}
+
+@media(max-width:900px){
+
+    .dashboard-hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .hero-right{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    .hero-right{
+
+        flex-direction:column;
+
+    }
+
+    .hero-left h2{
+
+        font-size:1.5rem;
+
+    }
+
+}
+
+/* ==========================================================
+                UPLOAD SECTION
+==========================================================*/
+
+.upload-section{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-top:25px;
+
+    border:1px solid #dbeafe;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}

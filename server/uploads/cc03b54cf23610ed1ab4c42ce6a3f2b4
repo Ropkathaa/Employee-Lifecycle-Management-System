@@ -1,0 +1,25 @@
+AUTOCAD ---> Automatic Coumputer Added Designing
+layer 1(2nd chapter)
+***autocad have infinite length and infinite width
+click new
+click home
+''	grid mode
+''	line(l enter)
+''	at a certain point
+''	f9 & f8 together for 90 deg.
+write 1000 to fix the length of the line
+press enter, green dotted rectangle will be our end point
+then "right " click object snap tracking in control bar
+load all th options **, press select all & ok
+take height from mid point 1000 mm
+extent two lines in left and right direction from the upper vertex of the median to the left & right vertex of the lines;
+use eraser (e enter) to remove the mid line.
+tr double enter ** for trimming
+
+
+
+
+
+
+1st tool bar is line in drawing tool bar
+lower one is control tool bar
