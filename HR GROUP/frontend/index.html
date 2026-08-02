@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HR Automation Platform</title>
+    <meta name="description" content="Enterprise HR Automation Platform — employee management, training, payroll, and compliance." />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!--
+      THEME INITIALIZATION SCRIPT
+      ─────────────────────────────────────────────────────────────────────────
+      This MUST run as a blocking (non-module, non-deferred) script before
+      any CSS or React renders. This prevents FOUC (Flash of Unstyled Content)
+      where the page briefly shows the wrong theme.
+
+      Rule: if localStorage['theme'] === 'dark' → apply .dark class
+             otherwise → light mode (no OS preference following for consistency)
+      ─────────────────────────────────────────────────────────────────────────
+    -->
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+            // Ensure first-time visitors always get light mode
+            if (!theme) localStorage.setItem('theme', 'light');
+          }
+        } catch (e) {
+          // localStorage blocked (private browsing) — default to light
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+

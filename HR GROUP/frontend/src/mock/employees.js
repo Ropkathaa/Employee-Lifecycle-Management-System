@@ -1,0 +1,258 @@
+/**
+ * mock/employees.js
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Initial seed data arrays and static domain constants ONLY.
+ * NO CRUD logic, NO state, NO helper functions.
+ */
+
+export const DEPARTMENTS = [
+  'Engineering',
+  'Human Resources',
+  'Finance',
+  'Product',
+  'Design',
+  'Marketing',
+  'Sales',
+  'Legal',
+  'Operations',
+];
+
+export const EMPLOYEE_STATUSES = [
+  'Active',
+  'Probation',
+  'Suspended',
+  'Resigned',
+];
+
+export const EMPLOYMENT_TYPES = [
+  'Full-Time',
+  'Part-Time',
+  'Contract',
+  'Internship',
+];
+
+export const WORK_LOCATIONS = [
+  'On-Site',
+  'Remote',
+  'Hybrid',
+];
+
+export const GENDERS = [
+  'Male',
+  'Female',
+  'Non-Binary',
+  'Prefer not to say',
+];
+
+export const MANAGERS = [
+  { id: 'MGR-001', name: 'Vikram Joshi', designation: 'Engineering Lead' },
+  { id: 'MGR-002', name: 'Priya Sharma', designation: 'HR Director' },
+  { id: 'MGR-003', name: 'Rahul Nair', designation: 'Finance Manager' },
+  { id: 'MGR-004', name: 'Sneha Kulkarni', designation: 'Product VP' },
+];
+
+export const employees = [
+  {
+    id: 'EMP-2026-0014',
+    name: 'Arjun Mehta',
+    firstName: 'Arjun',
+    lastName: 'Mehta',
+    email: 'arjun.mehta@company.com',
+    phone: '+91 98765 43210',
+    gender: 'Male',
+    dateOfBirth: '1994-12-01',
+    address: {
+      street: '42 Tech Park Avenue',
+      city: 'Bengaluru',
+      state: 'Karnataka',
+      zipCode: '560100',
+    },
+    department: 'Engineering',
+    designation: 'Senior Frontend Developer',
+    manager: 'Vikram Joshi (MGR-001)',
+    dateOfJoining: '2026-07-15',
+    employmentType: 'Full-Time',
+    workLocation: 'Hybrid',
+    status: 'Active',
+    avatarInitials: 'AM',
+    avatarColor: 'bg-violet-500',
+    salaryPackage: {
+      basicSalary: 900000,
+      allowances: 432000,
+      pfEligibility: true,
+      pfContribution: 108000,
+      totalCTC: 1332000,
+      bankName: 'HDFC Bank',
+      accountNumber: '50100234567891',
+      ifscCode: 'HDFC0001234',
+    },
+    documents: [
+      { id: 'doc-1', name: 'Aadhaar_Card_Arjun.pdf', type: 'Government ID', size: '1.2 MB', uploadedAt: '15-07-2026' },
+      { id: 'doc-2', name: 'Offer_Letter_Signed.pdf', type: 'Offer Letter', size: '850 KB', uploadedAt: '15-07-2026' },
+    ],
+    timeline: [
+      { id: 't1', title: 'Joined as Senior Frontend Developer', date: '15 Jul 2026', type: 'onboarding' },
+      { id: 't2', title: 'Completed Security & Compliance Training', date: '20 Jul 2026', type: 'training' },
+    ],
+  },
+  {
+    id: 'EMP-2026-0013',
+    name: 'Priya Sharma',
+    firstName: 'Priya',
+    lastName: 'Sharma',
+    email: 'priya.sharma@company.com',
+    phone: '+91 98123 45678',
+    gender: 'Female',
+    dateOfBirth: '1992-05-18',
+    address: {
+      street: '15 Rosewood Drive',
+      city: 'Mumbai',
+      state: 'Maharashtra',
+      zipCode: '400050',
+    },
+    department: 'Human Resources',
+    designation: 'HR Business Partner',
+    manager: 'Priya Sharma (MGR-002)',
+    dateOfJoining: '2026-07-10',
+    employmentType: 'Full-Time',
+    workLocation: 'On-Site',
+    status: 'Active',
+    avatarInitials: 'PS',
+    avatarColor: 'bg-emerald-500',
+    salaryPackage: {
+      basicSalary: 750000,
+      allowances: 360000,
+      pfEligibility: true,
+      pfContribution: 90000,
+      totalCTC: 1110000,
+      bankName: 'ICICI Bank',
+      accountNumber: '000401567890',
+      ifscCode: 'ICIC0000004',
+    },
+    documents: [
+      { id: 'doc-3', name: 'PAN_Card_Priya.pdf', type: 'Government ID', size: '900 KB', uploadedAt: '10-07-2026' },
+    ],
+    timeline: [
+      { id: 't3', title: 'Onboarded into HR Department', date: '10 Jul 2026', type: 'onboarding' },
+    ],
+  },
+  {
+    id: 'EMP-2026-0012',
+    name: 'Rahul Nair',
+    firstName: 'Rahul',
+    lastName: 'Nair',
+    email: 'rahul.nair@company.com',
+    phone: '+91 97456 78901',
+    gender: 'Male',
+    dateOfBirth: '1996-09-24',
+    address: {
+      street: '88 MG Road',
+      city: 'Kochi',
+      state: 'Kerala',
+      zipCode: '682016',
+    },
+    department: 'Finance',
+    designation: 'Financial Analyst',
+    manager: 'Rahul Nair (MGR-003)',
+    dateOfJoining: '2026-07-08',
+    employmentType: 'Full-Time',
+    workLocation: 'Hybrid',
+    status: 'Probation',
+    avatarInitials: 'RN',
+    avatarColor: 'bg-amber-500',
+    salaryPackage: {
+      basicSalary: 600000,
+      allowances: 288000,
+      pfEligibility: true,
+      pfContribution: 72000,
+      totalCTC: 888000,
+      bankName: 'Axis Bank',
+      accountNumber: '918010023456789',
+      ifscCode: 'UTIB0000123',
+    },
+    documents: [],
+    timeline: [
+      { id: 't4', title: 'Placed on 90-Day Probationary Period', date: '08 Jul 2026', type: 'probation' },
+    ],
+  },
+  {
+    id: 'EMP-2026-0011',
+    name: 'Sneha Kulkarni',
+    firstName: 'Sneha',
+    lastName: 'Kulkarni',
+    email: 'sneha.kulkarni@company.com',
+    phone: '+91 96321 87654',
+    gender: 'Female',
+    dateOfBirth: '1990-11-04',
+    address: {
+      street: '102 FC Road',
+      city: 'Pune',
+      state: 'Maharashtra',
+      zipCode: '411004',
+    },
+    department: 'Product',
+    designation: 'Product Manager',
+    manager: 'Sneha Kulkarni (MGR-004)',
+    dateOfJoining: '2026-07-01',
+    employmentType: 'Full-Time',
+    workLocation: 'Remote',
+    status: 'Active',
+    avatarInitials: 'SK',
+    avatarColor: 'bg-sky-500',
+    salaryPackage: {
+      basicSalary: 1100000,
+      allowances: 528000,
+      pfEligibility: true,
+      pfContribution: 132000,
+      totalCTC: 1628000,
+      bankName: 'SBI',
+      accountNumber: '20123456789',
+      ifscCode: 'SBIN0001234',
+    },
+    documents: [
+      { id: 'doc-4', name: 'Degree_Certificate.pdf', type: 'Education', size: '2.1 MB', uploadedAt: '01-07-2026' },
+    ],
+    timeline: [
+      { id: 't5', title: 'Assigned as Product Manager for HRMS Module', date: '01 Jul 2026', type: 'promotion' },
+    ],
+  },
+  {
+    id: 'EMP-2026-0010',
+    name: 'Vikram Joshi',
+    firstName: 'Vikram',
+    lastName: 'Joshi',
+    email: 'vikram.joshi@company.com',
+    phone: '+91 95123 67890',
+    gender: 'Male',
+    dateOfBirth: '1988-03-12',
+    address: {
+      street: '7 Sector 18',
+      city: 'Noida',
+      state: 'Uttar Pradesh',
+      zipCode: '201301',
+    },
+    department: 'Engineering',
+    designation: 'Backend Lead Engineer',
+    manager: 'Vikram Joshi (MGR-001)',
+    dateOfJoining: '2026-06-28',
+    employmentType: 'Full-Time',
+    workLocation: 'On-Site',
+    status: 'Active',
+    avatarInitials: 'VJ',
+    avatarColor: 'bg-indigo-500',
+    salaryPackage: {
+      basicSalary: 1300000,
+      allowances: 624000,
+      pfEligibility: true,
+      pfContribution: 156000,
+      totalCTC: 1924000,
+      bankName: 'HDFC Bank',
+      accountNumber: '50100987654321',
+      ifscCode: 'HDFC0001234',
+    },
+    documents: [],
+    timeline: [
+      { id: 't6', title: 'Joined Lead Tech Team', date: '28 Jun 2026', type: 'onboarding' },
+    ],
+  },
+];

@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* ─── Tailwind v4 Class-Based Dark Mode Variant ───────────────────────────────
+   Ensures `dark:` utilities trigger when `.dark` class is on <html> element
+   ─────────────────────────────────────────────────────────────────────────── */
+@variant dark (&:where(.dark, .dark *));
+
+/* ─── Design System — Primary Accent Color ─────────────────────────────────── */
+@theme {
+  --color-primary:       hsl(262, 83%, 58%);
+  --color-primary-hover: hsl(262, 83%, 48%);
+  --font-family-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.dark {
+  --color-primary:       hsl(262, 83%, 68%);
+  --color-primary-hover: hsl(262, 83%, 58%);
+}
+
+/* ─── Base Global Styles ─────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+    font-family: var(--font-family-sans);
+    transition: background-color 0.15s ease, color 0.15s ease;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb { background-color: #334155; }

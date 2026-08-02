@@ -1,0 +1,9 @@
+# Services Directory
+# All business logic, calculations, DB queries, and external calls live here.
+# Naming: camelCase - employeeService.js, pfCalculatorService.js
+# Controllers call services. Services call Models.
+# Example services for Phase 5:
+#   - employeeService.js   (CRUD + ID generation)
+#   - pfCalculatorService.js (Salary & PF math)
+#   - documentService.js   (File tracking)
+#   - trainingService.js   (Assignment logic)

@@ -1,0 +1,4 @@
+# Utils Directory
+# Generic, reusable utility functions.
+# Examples: dateFormatter.js, currencyHelper.js, fileHelpers.js
+# Utils must be pure functions with no side effects.

@@ -1,0 +1,5 @@
+# Models Directory
+# Place all Mongoose schemas here.
+# Naming: camelCase - employeeModel.js, documentModel.js
+# DO NOT write business logic inside models.
+# Only schema definitions, validators, indices, and pre/post hooks.

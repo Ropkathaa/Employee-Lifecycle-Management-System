@@ -1,0 +1,4 @@
+# Constants Directory
+# Application-wide constants: HTTP status codes, error messages, role definitions.
+# Naming: UPPERCASE_SNAKE_CASE for constant values.
+# Example: HTTP_STATUS.js, ERROR_MESSAGES.js, ROLES.js

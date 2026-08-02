@@ -1,0 +1,5 @@
+# Uploads Cache Directory
+# Multer stores uploaded files here during development.
+# Files are renamed with a timestamp prefix (set in config/multer.js).
+# In production, migrate to cloud object storage (e.g. AWS S3).
+# This directory must never be committed to version control.

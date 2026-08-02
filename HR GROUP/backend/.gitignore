@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Environment files (never commit secrets)
+.env
+.env.local
+.env.production
+
+# Uploaded files cache (move to cloud storage in production)
+src/uploads/*
+!src/uploads/.gitkeep
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# Logs
+*.log
+npm-debug.log*

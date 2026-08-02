@@ -1,0 +1,5 @@
+# Controllers Directory
+# Place all Express route handler controllers here.
+# Naming: camelCase - employeeController.js, documentController.js
+# Controllers must NOT directly query Mongoose models.
+# Delegate all business logic to the /services layer.
